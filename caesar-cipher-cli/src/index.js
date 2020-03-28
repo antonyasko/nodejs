@@ -27,8 +27,6 @@ const options = {
 const shiftStatus = shiftValidation(program.shift, options)
 const actionStatus = actionValidation(program.action, options)
 
-console.log(options.shift, options.action)
-
 if (program.input && shiftStatus && actionStatus) {
   try {
     inputText = fs.readFileSync(program.input, 'utf-8')

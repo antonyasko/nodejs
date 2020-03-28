@@ -1,9 +1,8 @@
 function actionValidation (action, options) {
   if (action === undefined) {
-    options.action = 'Action not specified!'
+    options.action = 'Enter all parameters!'
     return false
-  } else if (action.toLowerCase() !== 'decode'.toLowerCase() &&
-  action.toLowerCase() !== 'encode'.toLowerCase()) {
+  } else if (action !== 'decode' && action !== 'encode') {
     options.action = 'Incorrect action value!'
     return false
   } else {

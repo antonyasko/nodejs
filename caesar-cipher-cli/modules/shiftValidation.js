@@ -1,6 +1,6 @@
 function shiftValidation (action, options) {
   if (action === undefined) {
-    options.shift = 'Shift not specified!'
+    options.shift = 'Enter all parameters!'
     return false
   } else if (isNaN(action * 1)) {
     options.shift = 'Shift must be a number!'
