@@ -41,6 +41,7 @@ if (program.input && shiftStatus && actionStatus) {
   } catch (error) {
     process.on('exit', () => {
       process.stderr.write(('Incorrect input. Enter the correct input and try again.'))
+      process.exit(1)
     })
   }
 } else if (!program.input && shiftStatus && actionStatus) {
@@ -65,11 +66,14 @@ if (program.input && shiftStatus && actionStatus) {
   if (!shiftStatus) {
     process.on('exit', () => {
       process.stderr.write((`${options.shift}`))
+      process.exit(1)
     })
+    process.exit(1)
   }
   if (!actionStatus) {
-    process.on('exit', () => {
+    process.on('exit', (code) => {
       process.stderr.write((`${options.action}`))
+      process.exit(1)
     })
   }
 }
