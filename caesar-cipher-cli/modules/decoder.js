@@ -1,4 +1,3 @@
-
 function decoder (shift, action, char, alphabet) {
   alphabet = action.toLowerCase() === 'decode'.toLowerCase()
     ? alphabet.split('').reverse().join('') : alphabet
