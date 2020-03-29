@@ -70,7 +70,7 @@ if (program.input && shiftStatus && actionStatus) {
     process.exit(1)
   }
   if (!actionStatus) {
-    process.on('exit', (code) => {
+    process.on('exit', () => {
       process.stderr.write((`${options.action}`))
       process.exit(1)
     })
